@@ -1,0 +1,17 @@
+Option 2: Use LocalTunnel (simpler, no account)
+
+Install:
+
+npm install -g localtunnel
+
+
+Run tunnel:
+
+lt --port 3000
+
+
+You’ll get a public URL like:
+
+https://randomname.loca.lt
+
+npx localtunnel --port 3000 --subdomain employeeportal

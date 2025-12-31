@@ -1,0 +1,376 @@
+{
+  "info": {
+    "name": "Employment Portal API",
+    "description": "Postman collection for Employment Portal API with Candidates, Jobs, Employments, Admin, and Internal endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Candidates",
+      "item": [
+        {
+          "name": "Get All Candidates",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/candidates",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "candidates"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Candidate by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/candidates/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "candidates",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Jobs",
+      "item": [
+        {
+          "name": "Get All Jobs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/jobs",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jobs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Job by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/jobs/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jobs",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Employments (Admin)",
+      "item": [
+        {
+          "name": "Get All Employments",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/employments",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "employments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Employment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"employmentId\": 1643,\n  \"candidateName\": \"John Doe\",\n  \"Role\": \"Tester\",\n  \"Company\": \"Sarah QA\",\n  \"status\": \"Active\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/employments",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "employments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Employment by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/employments/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "employments",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Employment (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Status\": \"Active\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/employments/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "employments",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Employment",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/employments/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "employments",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Register Admin",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"adminName\": \"Postman App\",\n  \"adminEmail\": \"tester@example.com\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api-admin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api-admin"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Internal (Hidden)",
+      "description": "\u26a0\ufe0f Internal-only endpoints. Require admin Bearer token. Not for public use.",
+      "item": [
+        {
+          "name": "Create Candidate (Internal)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"candidateId\": 2001,\n  \"candidateName\": \"Jane Internal\",\n  \"Role\": \"Developer\",\n  \"Company\": \"InternalCo\",\n  \"available\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/candidate",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "candidate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Candidate (Internal)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/candidates/2001",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "candidates",
+                "2001"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Job (Internal)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"JobId\": 3001,\n  \"JobName\": \"Internal QA\",\n  \"Domain\": \"Testing\",\n  \"Company\": \"InternalCo\",\n  \"available\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/job",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "job"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Job (Internal)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/jobs/3001",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jobs",
+                "3001"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://mockserver.example.com"
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}

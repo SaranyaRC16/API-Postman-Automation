@@ -1,0 +1,93 @@
+{
+  "candidates": [
+    {
+      "candidateId": 1,
+      "candidateName": "John Doe",
+      "Role": "Tester",
+      "Company": "Sarah QA",
+      "available": true
+    },
+    {
+      "candidateId": 2,
+      "candidateName": "Mary Joe",
+      "Role": "Developer",
+      "Company": "Sarah QA",
+      "available": true
+    },
+    {
+      "candidateId": 2001,
+      "candidateName": "Jane Internal",
+      "Role": "Developer",
+      "Company": "InternalCo",
+      "available": true
+    }
+  ],
+  "jobs": [
+    {
+      "JobId": 1,
+      "JobName": "QA Analyst",
+      "Domain": "Testing",
+      "Company": "Sarah QA",
+      "available": true
+    },
+    {
+      "JobId": 2,
+      "JobName": "SDET Engineer",
+      "Domain": "Development",
+      "Company": "Sarah QA",
+      "available": true
+    }
+  ],
+  "employments": [
+    {
+      "employmentId": 1645,
+      "candidateName": "Alejandro Block",
+      "Role": "Developer",
+      "Company": "Sarah QA",
+      "status": "Active",
+      "id": 5
+    },
+    {
+      "employmentId": 1645,
+      "candidateName": "Vanessa O'Hara",
+      "Role": "Developer",
+      "Company": "Sarah QA",
+      "status": "Active",
+      "id": 6
+    },
+    {
+      "employmentId": 1645,
+      "candidateName": "Caroline Reinger",
+      "Role": "Developer",
+      "Company": "Sarah QA",
+      "status": "Active",
+      "id": 7
+    }
+  ],
+  "admins": [
+    {
+      "id": 1756289455565,
+      "adminName": "Postman App",
+      "adminEmail": "tester01@example.com",
+      "token": "BK83ETDNU7LS0D3C"
+    },
+    {
+      "id": 1756290695741,
+      "adminName": "Postman App",
+      "adminEmail": "tester02@example.com",
+      "token": "DH6DWC5R4QAHARQW"
+    },
+    {
+      "id": 1759415714893,
+      "adminName": "Postman App",
+      "adminEmail": "Marty45@example.org",
+      "token": "AP0RGKGDKRYYDZ6J"
+    },
+    {
+      "id": 1759667639301,
+      "adminName": "Postman App",
+      "adminEmail": "Leda.Conn92@example.com",
+      "token": "9NKUS57SQ9ZM8Q66"
+    }
+  ]
+}
